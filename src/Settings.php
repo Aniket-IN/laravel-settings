@@ -2,8 +2,8 @@
 
 namespace AniketIN\Settings;
 
-use Illuminate\Support\Arr;
 use AniketIN\Settings\Models\Setting;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
 
 class Settings
@@ -19,16 +19,16 @@ class Settings
 
     public function chargeConfig()
     {
-        if (!\Schema::hasTable('settings')) {
+        if (! \Schema::hasTable('settings')) {
             return;
         }
 
-        $settings =  Cache::rememberForever('laravel-settings-db', function () {
+        $settings = Cache::rememberForever('laravel-settings-db', function () {
             return Setting::get()->toBase();
         });
 
         foreach (Arr::dot(config('settings')) as $key => $setting) {
-            if (!$settings->contains('key', $key)) {
+            if (! $settings->contains('key', $key)) {
                 app('config')->set([$key => $setting]);
             }
         }

@@ -2,9 +2,9 @@
 
 namespace AniketIN\Settings\Tests;
 
+use AniketIN\Settings\SettingsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use AniketIN\Settings\SettingsServiceProvider;
 
 class TestCase extends Orchestra
 {

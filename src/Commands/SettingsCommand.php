@@ -2,10 +2,10 @@
 
 namespace AniketIN\Settings\Commands;
 
-use Illuminate\Support\Arr;
-use Illuminate\Console\Command;
-use AniketIN\Settings\Models\Setting;
 use AniketIN\Settings\Facades\Settings;
+use AniketIN\Settings\Models\Setting;
+use Illuminate\Console\Command;
+use Illuminate\Support\Arr;
 
 class SettingsCommand extends Command
 {

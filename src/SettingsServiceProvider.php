@@ -2,9 +2,9 @@
 
 namespace AniketIN\Settings;
 
+use AniketIN\Settings\Commands\SettingsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use AniketIN\Settings\Commands\SettingsCommand;
 
 class SettingsServiceProvider extends PackageServiceProvider
 {
